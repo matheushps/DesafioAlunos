@@ -1,37 +1,30 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DesafioAlunos
 {
     public class Grupo
     {
-        private int _quantidadeGrupo;
-        public int QuantidadeGrupo
+        public void DividirGrupo(List<Aluno> listaAlunos, int qtdGrupo)
         {
+            double alunos = listaAlunos.Count / qtdGrupo;
+            alunos = Math.Ceiling(alunos);
 
-            get
+            int contador = 0;
+            int grupo = 1;
+
+            foreach (var pessoas in listaAlunos)
             {
-                return this._quantidadeGrupo;
-            }
-
-            set
-            {
-                this._quantidadeGrupo = value > 0 ? value : 0;
-
-            }
-        }
-
-            public void DividirGrupos()
-            {
-                if (QuantidadeGrupo % 2 == 1)
+                if (contador > alunos)
                 {
-
+                    contador = 0;
+                    grupo++;
                 }
+                pessoas.Id = grupo;
 
+                Console.WriteLine("{0}   Grupo {1} ", pessoas.Nome.PadRight(10, ' '), pessoas.Id);
+                contador++;
             }
         }
     }
-
+}

@@ -1,9 +1,6 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace DesafioAlunos
 {
@@ -17,41 +14,27 @@ namespace DesafioAlunos
             int continuar = 1;
             while (continuar == 1)
             {
-                Console.WriteLine("Digite um nome para inserir na lista:");
+                Console.WriteLine("Digite o nome do aluno para inserir na lista:");
                 listaAlunos.Add(new Aluno {Nome = Console.ReadLine()});
 
-                Console.WriteLine("Inserir um novo aluno? 1-SIM | 2-NÃO");
+                Console.WriteLine("Continuar inserindo novos registros? 1-Sim | 2-Não");
                 continuar = int.Parse(Console.ReadLine());
+                Console.Clear();
             }
-            Console.Clear();
 
-            Console.WriteLine("A sala de aula possui " + listaAlunos.Count + " alunos!");
-            Console.WriteLine("Em quantos grupos deseja dividir a sala?");
+            Console.WriteLine("A sala de aula possui " + listaAlunos.Count + " alunos. Em quantos grupos deseja dividir a sala?");
             int qtdGrupos = int.Parse(Console.ReadLine());
 
             if (qtdGrupos > listaAlunos.Count)
             {
-                Console.Clear();
                 Console.WriteLine("O numero de grupos não deve ser maior que o numero de alunos");
             }
-            
-            foreach (var vNome in listaAlunos)
-            {
-                Console.WriteLine(vNome.Nome);
-            }
 
+            SorteioGrupos novoSorteio = new SorteioGrupos();
+            novoSorteio.MisturarGrupos(listaAlunos);
 
-
-            //List<int> inteiros = new List<int>();
-            //List<int> inteiros2 = new List<int>();
-
-            //Random rand = new Random(inteiros.Count);
-            //foreach (var inteiro in inteiros)
-            //{
-            //    var inteiro2 = inteiros[rand.Next()];
-            //    inteiros2.Add(inteiro2);
-            //}
-
+            Grupo novoGrupo = new Grupo();
+            novoGrupo.DividirGrupo(listaAlunos, qtdGrupos);
 
             Console.ReadKey();
         }

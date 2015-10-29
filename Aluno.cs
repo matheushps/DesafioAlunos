@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DesafioAlunos
 {
-   public class Aluno : Grupo
+   public class Aluno
     {
        public Aluno()
        {

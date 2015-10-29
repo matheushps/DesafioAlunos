@@ -1,6 +1,6 @@
 C:\TFS\DB1TRAINEE\MinhaSolucao\DesafioAlunos\bin\Debug\DesafioAlunos.exe.config
 C:\TFS\DB1TRAINEE\MinhaSolucao\DesafioAlunos\bin\Debug\DesafioAlunos.exe
 C:\TFS\DB1TRAINEE\MinhaSolucao\DesafioAlunos\bin\Debug\DesafioAlunos.pdb
+C:\TFS\DB1TRAINEE\MinhaSolucao\DesafioAlunos\obj\Debug\DesafioAlunos.csprojResolveAssemblyReference.cache
 C:\TFS\DB1TRAINEE\MinhaSolucao\DesafioAlunos\obj\Debug\DesafioAlunos.exe
 C:\TFS\DB1TRAINEE\MinhaSolucao\DesafioAlunos\obj\Debug\DesafioAlunos.pdb
-C:\TFS\DB1TRAINEE\MinhaSolucao\DesafioAlunos\obj\Debug\DesafioAlunos.csprojResolveAssemblyReference.cache
